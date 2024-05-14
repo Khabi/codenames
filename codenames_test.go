@@ -32,32 +32,32 @@ func TestNew(t *testing.T) {
 func TestGenerate(t *testing.T) {
 	var tests = []struct {
 		parts     []Part
-		seperator string
+		separator string
 		filter    []string
 		expected  string
 	}{
 		{
 			parts:     []Part{name, abbr, num},
-			seperator: "-",
+			separator: "-",
 			filter:    nil,
 			expected:  "stargate-sg-1",
 		},
 		{
 			parts:     []Part{dupe, dupe},
-			seperator: "-",
+			separator: "-",
 			filter:    nil,
 			expected:  "GDO-DHD",
 		},
 		{
 			parts:     []Part{name, filtered},
-			seperator: " ",
+			separator: " ",
 			filter:    []string{"nomatch", "goa'uld"},
 			expected:  "stargate tau'ri",
 		},
 	}
 
 	for _, tt := range tests {
-		res := Generate(tt.seperator, tt.filter, tt.parts...)
+		res := Generate(tt.separator, tt.filter, tt.parts...)
 		assert.Equal(t, tt.expected, res)
 	}
 }
