@@ -6,7 +6,9 @@ import "strings"
 // be some kind of dictionary lookup that returns a random word.
 type Part func() string
 
-// New a generic syntaxically correct slug seperated by dashes.
+// New a generic syntaxically correct slug seperated by dashes. Returns
+// a descriptive adjective, size, color, noun combo.
+// Example: scared-pocket-pink-data
 func New() string {
 	return Generate("-", nil, Descriptive, Size, Color, Noun)
 }
