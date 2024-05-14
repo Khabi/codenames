@@ -1,4 +1,4 @@
-# codenames [![Go Reference](https://pkg.go.dev/badge/github.com/Khabi/codenames.svg)](https://pkg.go.dev/github.com/Khab/codenames)
+# codenames 🕵️ [![Go Reference](https://pkg.go.dev/badge/github.com/Khabi/codenames.svg)](https://pkg.go.dev/github.com/Khabi/codenames)
 
 Codenames is a simple library for generating short combinatons of random words ala docker's name generator.
 
