@@ -4,16 +4,19 @@ on:
   pull_request:
     branches: [ "main" ]
 
-job:
+jobs:
   test:
     runs-on: ubuntu
 
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
-      
+
       - name: Go Version
         run: go version
+
+      - name: Go Vet
+        run: go vet ./
 
       - name: Go Test
         run: go test ./ -v
